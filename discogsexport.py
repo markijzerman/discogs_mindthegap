@@ -1,7 +1,7 @@
 import discogs_client
 import time
 
-d = discogs_client.Client('mind-the-gap-exporter/0.1', user_token="WvsLIPyPPOjuXxwRhohROmxEqHaaNOPhwLjhNJMF")
+d = discogs_client.Client('mind-the-gap-exporter/0.1', user_token="")
 
 # find the Gonzo label and it's releases
 results = d.search('gonzo circus', type='label')
