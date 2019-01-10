@@ -1,7 +1,7 @@
 import discogs_client
 import time
 
-outFile = "GONZOCIRCUS.txt"
+outFile = "GONZOCIRCUS.html"
 
 f = open(outFile, "w")
 
@@ -21,7 +21,7 @@ for release in gonzoreleases:
     f.write(" (")
     f.write(str(release.year))
     f.write(")")
-    f.write("\n")
+    f.write("<br>")
     print( )
     for track in release.tracklist:
         artistname = ""
@@ -34,11 +34,17 @@ for release in gonzoreleases:
             print(artistname, "-", title)
             f.write(artistname)
             f.write(" - ")
+            f.write("<i>")
             f.write(title)
-            f.write("\n")
-    f.write("\n")
+            f.write("</i>")
+            f.write("<br>")
+    f.write("<br>")
     print(release.notes)
+    f.write("<b>")
+    f.write("<i>")
     f.write(release.notes)
-    f.write("\n")
+    f.write("</b>")
+    f.write("</i>")
+    f.write("<br>")
     print( )
 
