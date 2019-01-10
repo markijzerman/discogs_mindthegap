@@ -16,7 +16,11 @@ gonzoreleases = gonzolabel.releases
 for release in gonzoreleases:
     time.sleep(0.5)
     print(release.title.upper())
+    print(release.year)
     f.write(release.title.upper())
+    f.write(" (")
+    f.write(str(release.year))
+    f.write(")")
     f.write("\n")
     print( )
     for track in release.tracklist:
@@ -33,5 +37,8 @@ for release in gonzoreleases:
             f.write(title)
             f.write("\n")
     f.write("\n")
+    print(release.notes)
+    f.write(release.notes)
     f.write("\n")
+    print( )
 
